@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BimestralTrabModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BimestralTrabEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bairro" EntityType="BimestralTrabModel.Bairro" />
+    <EntitySet Name="Cidade" EntityType="BimestralTrabModel.Cidade" />
+    <EntitySet Name="Dependente" EntityType="BimestralTrabModel.Dependente" />
+    <EntitySet Name="Tipo_Logradouro" EntityType="BimestralTrabModel.Tipo_Logradouro" />
+    <EntitySet Name="TipoDependente" EntityType="BimestralTrabModel.TipoDependente" />
+    <AssociationSet Name="FK_Dependente_TipoDependente" Association="BimestralTrabModel.FK_Dependente_TipoDependente">
+      <End Role="TipoDependente" EntitySet="TipoDependente" />
+      <End Role="Dependente" EntitySet="Dependente" />
+    </AssociationSet>
+    <EntitySet Name="Cliente" EntityType="BimestralTrabModel.Cliente" />
+    <AssociationSet Name="FK_Cliente_Bairro" Association="BimestralTrabModel.FK_Cliente_Bairro">
+      <End Role="Bairro" EntitySet="Bairro" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Cidade" Association="BimestralTrabModel.FK_Cliente_Cidade">
+      <End Role="Cidade" EntitySet="Cidade" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Tipo_Logradouro" Association="BimestralTrabModel.FK_Cliente_Tipo_Logradouro">
+      <End Role="Tipo_Logradouro" EntitySet="Tipo_Logradouro" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dependente_Cliente" Association="BimestralTrabModel.FK_Dependente_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Dependente" EntitySet="Dependente" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bairro">
+    <Key>
+      <PropertyRef Name="BairroID" />
+    </Key>
+    <Property Name="BairroID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="BimestralTrabModel.FK_Cliente_Bairro" FromRole="Bairro" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Cidade">
+    <Key>
+      <PropertyRef Name="CidadeID" />
+    </Key>
+    <Property Name="CidadeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="BimestralTrabModel.FK_Cliente_Cidade" FromRole="Cidade" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Dependente">
+    <Key>
+      <PropertyRef Name="DependenteID" />
+    </Key>
+    <Property Name="DependenteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TipoDependente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TipoDependente1" Relationship="BimestralTrabModel.FK_Dependente_TipoDependente" FromRole="Dependente" ToRole="TipoDependente" />
+    <NavigationProperty Name="Cliente1" Relationship="BimestralTrabModel.FK_Dependente_Cliente" FromRole="Dependente" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Tipo_Logradouro">
+    <Key>
+      <PropertyRef Name="LogradouroID" />
+    </Key>
+    <Property Name="LogradouroID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="BimestralTrabModel.FK_Cliente_Tipo_Logradouro" FromRole="Tipo_Logradouro" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="TipoDependente">
+    <Key>
+      <PropertyRef Name="TipoDependenteID" />
+    </Key>
+    <Property Name="TipoDependenteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Dependente" Relationship="BimestralTrabModel.FK_Dependente_TipoDependente" FromRole="TipoDependente" ToRole="Dependente" />
+  </EntityType>
+  <Association Name="FK_Dependente_TipoDependente">
+    <End Type="BimestralTrabModel.TipoDependente" Role="TipoDependente" Multiplicity="1" />
+    <End Type="BimestralTrabModel.Dependente" Role="Dependente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDependente">
+        <PropertyRef Name="TipoDependenteID" />
+      </Principal>
+      <Dependent Role="Dependente">
+        <PropertyRef Name="TipoDependente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ClienteID" />
+    </Key>
+    <Property Name="ClienteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TipoLogradouro" Type="Int32" Nullable="false" />
+    <Property Name="Logradouro" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Bairro" Type="Int32" Nullable="false" />
+    <Property Name="Cidade" Type="Int32" Nullable="false" />
+    <Property Name="UF" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Telefone" Type="Int64" Nullable="false" />
+    <Property Name="CPF" Type="Int64" Nullable="false" />
+    <Property Name="RG" Type="Int64" />
+    <NavigationProperty Name="Tipo_Logradouro" Relationship="BimestralTrabModel.FK_Cliente_Tipo_Logradouro" FromRole="Cliente" ToRole="Tipo_Logradouro" />
+    <NavigationProperty Name="Dependente" Relationship="BimestralTrabModel.FK_Dependente_Cliente" FromRole="Cliente" ToRole="Dependente" />
+  </EntityType>
+  <Association Name="FK_Cliente_Bairro">
+    <End Type="BimestralTrabModel.Bairro" Role="Bairro" Multiplicity="1" />
+    <End Type="BimestralTrabModel.Cliente" Role="Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bairro">
+        <PropertyRef Name="BairroID" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Bairro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Cidade">
+    <End Type="BimestralTrabModel.Cidade" Role="Cidade" Multiplicity="1" />
+    <End Type="BimestralTrabModel.Cliente" Role="Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cidade">
+        <PropertyRef Name="CidadeID" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Cidade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Tipo_Logradouro">
+    <End Type="BimestralTrabModel.Tipo_Logradouro" Role="Tipo_Logradouro" Multiplicity="1" />
+    <End Type="BimestralTrabModel.Cliente" Role="Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Logradouro">
+        <PropertyRef Name="LogradouroID" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="TipoLogradouro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dependente_Cliente">
+    <End Type="BimestralTrabModel.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="BimestralTrabModel.Dependente" Role="Dependente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteID" />
+      </Principal>
+      <Dependent Role="Dependente">
+        <PropertyRef Name="Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

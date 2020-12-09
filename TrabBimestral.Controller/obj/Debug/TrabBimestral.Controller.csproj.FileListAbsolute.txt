@@ -1,0 +1,5 @@
+C:\Users\luizf\Desktop\Trabalhos\TrabBimestral.Controller\bin\Debug\TrabBimestral.Controller.dll
+C:\Users\luizf\Desktop\Trabalhos\TrabBimestral.Controller\bin\Debug\TrabBimestral.Controller.pdb
+C:\Users\luizf\Desktop\Trabalhos\TrabBimestral.Controller\obj\Debug\TrabBimestral.Controller.csproj.CoreCompileInputs.cache
+C:\Users\luizf\Desktop\Trabalhos\TrabBimestral.Controller\obj\Debug\TrabBimestral.Controller.dll
+C:\Users\luizf\Desktop\Trabalhos\TrabBimestral.Controller\obj\Debug\TrabBimestral.Controller.pdb

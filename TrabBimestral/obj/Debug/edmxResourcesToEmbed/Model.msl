@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BimestralTrabModelStoreContainer" CdmEntityContainer="BimestralTrabEntities">
+    <EntitySetMapping Name="Bairro">
+      <EntityTypeMapping TypeName="BimestralTrabModel.Bairro">
+        <MappingFragment StoreEntitySet="Bairro">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="BairroID" ColumnName="BairroID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cidade">
+      <EntityTypeMapping TypeName="BimestralTrabModel.Cidade">
+        <MappingFragment StoreEntitySet="Cidade">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CidadeID" ColumnName="CidadeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dependente">
+      <EntityTypeMapping TypeName="BimestralTrabModel.Dependente">
+        <MappingFragment StoreEntitySet="Dependente">
+          <ScalarProperty Name="TipoDependente" ColumnName="TipoDependente" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="DependenteID" ColumnName="DependenteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Logradouro">
+      <EntityTypeMapping TypeName="BimestralTrabModel.Tipo_Logradouro">
+        <MappingFragment StoreEntitySet="Tipo_Logradouro">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="LogradouroID" ColumnName="LogradouroID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDependente">
+      <EntityTypeMapping TypeName="BimestralTrabModel.TipoDependente">
+        <MappingFragment StoreEntitySet="TipoDependente">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="TipoDependenteID" ColumnName="TipoDependenteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="BimestralTrabModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+          <ScalarProperty Name="TipoLogradouro" ColumnName="TipoLogradouro" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="ClienteID" ColumnName="ClienteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

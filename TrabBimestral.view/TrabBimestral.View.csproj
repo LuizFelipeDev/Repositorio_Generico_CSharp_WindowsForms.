@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DD5637B-CC71-4DC7-8C5D-B76C663D2959}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TrabBimestral.view</RootNamespace>
+    <AssemblyName>TrabBimestral.view</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\TrabBimestral\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\TrabBimestral\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BimestralTrabDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BimestralTrabDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BimestralTrabDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BimestralTrabDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BimestralTrabDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BimestralTrabDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BimestralTrabDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BimestralTrabDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BimestralTrabDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BimestralTrabDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BimestralTrabDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BimestralTrabDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroBairro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroBairro.Designer.cs">
+      <DependentUpon>CadastroBairro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCidade.Designer.cs">
+      <DependentUpon>CadastroCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCliente.Designer.cs">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroDependente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroDependente.Designer.cs">
+      <DependentUpon>CadastroDependente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroTipoDependente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroTipoDependente.Designer.cs">
+      <DependentUpon>CadastroTipoDependente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroTipoLogradouro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroTipoLogradouro.Designer.cs">
+      <DependentUpon>CadastroTipoLogradouro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClienteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\CCadBairro.cs" />
+    <Compile Include="Controller\CCadCidade.cs" />
+    <Compile Include="Controller\CCadCliente.cs" />
+    <Compile Include="Controller\CCadDependente.cs" />
+    <Compile Include="Controller\CCadTipoDependente.cs" />
+    <Compile Include="Controller\CCadTipoLogradouro.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CadastroBairro.resx">
+      <DependentUpon>CadastroBairro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroCidade.resx">
+      <DependentUpon>CadastroCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroCliente.resx">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroDependente.resx">
+      <DependentUpon>CadastroDependente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroTipoDependente.resx">
+      <DependentUpon>CadastroTipoDependente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroTipoLogradouro.resx">
+      <DependentUpon>CadastroTipoLogradouro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="BimestralTrabDataSet.xsc">
+      <DependentUpon>BimestralTrabDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BimestralTrabDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BimestralTrabDataSet.xss">
+      <DependentUpon>BimestralTrabDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet1.xsc">
+      <DependentUpon>BimestralTrabDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BimestralTrabDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BimestralTrabDataSet1.xss">
+      <DependentUpon>BimestralTrabDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet2.xsc">
+      <DependentUpon>BimestralTrabDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BimestralTrabDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BimestralTrabDataSet2.xss">
+      <DependentUpon>BimestralTrabDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet3.xsc">
+      <DependentUpon>BimestralTrabDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BimestralTrabDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BimestralTrabDataSet3.xss">
+      <DependentUpon>BimestralTrabDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet4.xsc">
+      <DependentUpon>BimestralTrabDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BimestralTrabDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BimestralTrabDataSet4.xss">
+      <DependentUpon>BimestralTrabDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet6.xsc">
+      <DependentUpon>BimestralTrabDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BimestralTrabDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BimestralTrabDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BimestralTrabDataSet6.xss">
+      <DependentUpon>BimestralTrabDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ClienteDataSet.xsc">
+      <DependentUpon>ClienteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClienteDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClienteDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClienteDataSet.xss">
+      <DependentUpon>ClienteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrabBimestral\TrabBimestral.Model.csproj">
+      <Project>{ff6732fb-d7b4-42eb-ba3b-3b471cf41c31}</Project>
+      <Name>TrabBimestral.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
